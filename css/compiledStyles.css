@@ -501,63 +501,6 @@ ul .button {
   bottom: 0px;
   width: 10px;
 }
-.page > .header {
-  background: #000000;
-}
-.page > .header .leftContent {
-  float: left;
-}
-.page > .header .leftContent .logo {
-  width: 33px;
-  height: 33px;
-  background-image: url(/client/public/images/logo.33x33.png);
-  float: left;
-  margin: 0 10px 0 10px;
-}
-.page > .header .leftContent .tabs {
-  float: left;
-}
-.page > .header .leftContent .tabs .button {
-  padding-top: 3px;
-  padding-bottom: 4px;
-  width: 80px;
-  text-align: center;
-  float: left;
-  background-color: transparent;
-  text-decoration: none;
-}
-.page > .header .leftContent .tabs .button .text {
-  color: #fff;
-  text-transform: uppercase;
-}
-.page > .header .leftContent .tabs .button.selected {
-  background: #fff;
-  font-weight: bold;
-}
-.page > .header .leftContent .tabs .button.selected .text {
-  color: #0047bb;
-}
-.page > .header .leftContent .options {
-  float: left;
-  margin-left: 20px;
-}
-.page > .header .leftContent .options .buttonIcon {
-  padding: 3px 3px 4px 3px;
-}
-.page > .header .rightContent {
-  float: right;
-  margin-right: 20px;
-}
-.page > .header .rightContent .splitButton {
-  margin-top: 3px;
-  background-color: transparent;
-}
-.page > .header .rightContent .splitButton .button {
-  background-color: transparent;
-}
-.page > .header .rightContent .splitButton .button .text {
-  color: #fff;
-}
 .icn12x12 {
   background-position: center center;
   background-repeat: no-repeat;
@@ -623,24 +566,6 @@ ul .button {
 .icnCopyDark {
   background-image: url(/client/public/images/icons/icnCopyDark.png);
 }
-/* HTML TEMPLATES */
-/*
-@import "tree.less";
-@import "menu.less";
-@import "forms.less";
-@import "button.less";
-@import "nav.less";
-@import "lists.less";
-@import "editForm.less";
-@import "notifications.less";
-@import "tables.less";
-@import "toolbar.less";
-@import "databar.less";
-@import "expander.less";
-@import "filters.less";
-@import "help.less";
-@import "page.less";
-*/
 body,
 td,
 input,
@@ -1035,4 +960,61 @@ input[type='search']::-webkit-search-cancel-button {
 }
 .inputButton + input {
   padding-right: 45px;
+}
+.page > .header {
+  background: #000000;
+}
+.page > .header .leftContent {
+  float: left;
+}
+.page > .header .leftContent .logo {
+  width: 33px;
+  height: 33px;
+  background-image: url(/modules/asci-header-layout-view/images/logo.33x33.png);
+  float: left;
+  margin: 0 10px 0 10px;
+}
+.page > .header .leftContent .tabs {
+  float: left;
+}
+.page > .header .leftContent .tabs .button {
+  padding-top: 3px;
+  padding-bottom: 4px;
+  width: 80px;
+  text-align: center;
+  float: left;
+  background-color: transparent;
+  text-decoration: none;
+}
+.page > .header .leftContent .tabs .button .text {
+  color: #fff;
+  text-transform: uppercase;
+}
+.page > .header .leftContent .tabs .button.selected {
+  background: #fff;
+  font-weight: bold;
+}
+.page > .header .leftContent .tabs .button.selected .text {
+  color: #0047bb;
+}
+.page > .header .leftContent .options {
+  float: left;
+  margin-left: 20px;
+}
+.page > .header .leftContent .options .buttonIcon {
+  padding: 3px 3px 4px 3px;
+}
+.page > .header .rightContent {
+  float: right;
+  margin-right: 20px;
+}
+.page > .header .rightContent .splitButton {
+  margin-top: 3px;
+  background-color: transparent;
+}
+.page > .header .rightContent .splitButton .button {
+  background-color: transparent;
+}
+.page > .header .rightContent .splitButton .button .text {
+  color: #fff;
 }

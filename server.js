@@ -14,29 +14,17 @@ server.views({
   path: __dirname
 });
 
-// server.route({
-  // method: 'GET',
-  // path: '/images/{image*}',
-  // handler: {
-    // directory: {
-      // path: function(request) {
-        // return '/images';
-      // }
-    // }
-  // }
-// });
-
-// server.route({
-  // method: 'GET',
-  // path: '/modules/{module}/images/{image*}',
-  // handler: {
-    // directory: {
-      // path: function(request) {
-        // return 'modules/' + request.params.module + '/images';
-      // }
-    // }
-  // }
-// });
+server.route({
+  method: 'GET',
+  path: '/modules/{module}/images/{image*}',
+  handler: {
+    directory: {
+      path: function(request) {
+        return 'modules/' + request.params.module + '/images';
+      }
+    }
+  }
+});
 
 
 // Fallback on saturn for everthing that is not handled before
