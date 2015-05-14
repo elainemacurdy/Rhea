@@ -1,0 +1,125 @@
+/*********************************************************
+ * BRAND COLORS
+ *********************************************************/
+@dataColor: #00c18b;
+@dataMidColor: #99e6d1;
+@dataLightColor: #e5f9f3;
+
+@mediaColor: #0047bb;
+@mediaMidColor: #99b5e4;
+@mediaLightColor: #e5ecf8;
+
+@insightsColor: #05cede;
+@insightsMidColor: #9bebf2;
+@insightsLightColor: #e6fafc;
+
+
+/*********************************************************
+ * GREY COLORS
+ *********************************************************/
+@darkGrey: #000;
+@midDarkGrey: #5f5f79;
+@midGrey: #a1a1b7;
+@midLightGrey: #d9d9e7;
+@lightGrey: #e6e6f1;
+@veryLightGrey: #f3f3f8;
+@ultraLightGrey: #f8f8fb;
+@white: #ffffff;
+
+
+/*********************************************************
+ * GENERAL PURPOSE COLORS
+ *********************************************************/
+@brandRed: #f9423a;
+@brandRedMid: #fdb3b0;
+@brandRedLight: #feeceb;
+
+@brandOrange: #ff6900;
+@brandOrangeMid: #ffc399;
+@brandOrangeLight: #fff0e5;
+
+@brandYellow: #d0df00;
+@brandYellowMid: #ecf299;
+@brandYellowLight: #fafce5;
+
+@brandPurple: #bb29bb;
+@brandPurpleMid: #e4a9e4;
+@brandPurpleLight: #f8e9f8;
+
+@orangeYellow: #ea9b00;
+@orangeYellowMid: #f7d799;
+@orangeYellowLight: #fdf5e5;
+
+@yellow: #fcff00;
+@yellowMid: #feff99;
+@yellowLight: #ffffe5;
+
+@green: #4a9800;
+@greenMid: #b7d699;
+@greenLight: #edf4e5;
+
+@blue: #0065ef;
+@blueMid: #99c1f9;
+@blueLight: #e5effd;
+
+@brown: #944900;
+@brownMid: #d4b699;
+@brownLight: #f4ece5;
+
+
+/*********************************************************
+ * ASSIGNED COLORS
+ *********************************************************/
+@fontColor: @darkGrey;
+@borderColor: @midLightGrey;
+@darkBorderColor: @midGrey;
+@selectedColor: @insightsColor;
+
+// this color isn't final for hovers but all hovers in 
+// all apps will be the same
+@hoverColor: @insightsColor;
+@hoverMidColor: @insightsMidColor;
+@hoverLightColor: @insightsLightColor;
+
+/*********************************************************
+ * BRAND COLORS - based on selected application
+ *********************************************************/
+.isData .brandColor{
+    background-color: @dataColor;
+}
+.isData .brandColorMid{
+    background-color: @dataMidColor;
+}
+.isData .brandColorLight{
+    background-color: @dataLightColor;
+}
+.isData .brandFont{
+    color: @dataColor;
+}
+
+.isMedia .brandColor{
+    background-color: @mediaColor;
+}
+.isMedia .brandColorMid{
+    background-color: @mediaMidColor;
+}
+.isMedia .brandColorLight{
+    background-color: @mediaLightColor;
+}
+.isMedia .brandFont{
+    color: @mediaColor;
+}
+
+.isInsights .brandColor{
+    background-color: @insightsColor;
+}
+.isInsights .brandColorMid{
+    background-color: @insightsMidColor;
+}
+.isInsights .brandColorLight{
+    background-color: @insightsLightColor;
+}
+.isInsights .brandFont{
+    color: @insightsColor;
+}
+ 

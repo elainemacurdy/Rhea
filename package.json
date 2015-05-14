@@ -1,0 +1,52 @@
+{
+  "name": "asci-rhea",
+  "description": "",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.uscorp.audsci.com:7999/asci/monoceros.git"
+  },
+  "publishConfig": {
+    "registry": "http://npmrepo.ascitest.net:4444"
+  },
+  "homepage": "http://ui.ascitest.net:9090",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "(for dir in $(find modules -type d -mindepth 1 -maxdepth 1 -name asci-* | grep -v excel | grep -v json-to | grep -v hapi-media-app | grep -v asci-tap-spec) ; do echo $dir ; (cd $dir ; npm test ;  [[ $? == 0 ]] || { echo 'test error'; exit 1; } ) ; [[ $? == 0 ]] || { echo 'error'; exit 1; } ; done); echo $?"
+  },
+  "author": "Elaine Harman <elaine.harman@audiencescience.com>",
+  "maintainers": [
+    {
+      "name": "Elaine Harman",
+      "email": "elaine.harman@audiencescience.com"
+    }
+  ],
+  "license": "ASI",
+  "dependencies": {
+    "ampersand-model": "^5.0.3",
+    "ampersand-registry": "^0.2.2",
+    "ampersand-rest-collection": "^4.0.0",
+    "ampersand-router": "^3.0.2",
+    "ampersand-view": "^7.3.0",
+    "backbone-events-standalone": "~0.2.6",
+    "browserify-jquery-storage-api": "^1.7.3",
+    "domthing": "^0.4.0",
+    "domthingify": "~0.2.0",
+    "favicon-setter": "^0.1.1",
+    "fs-extra": "^0.16.4",
+    "getconfig": "~0.3.0",
+    "good": "~2.2.1",
+    "handlebars": "~2.0.0",
+    "hapi": "~6.4.0",
+    "hat": "0.0.3",
+    "joi": "^4.7.0",
+    "jquery": "~2.1.4",
+    "jquery-ui": "^1.10.5",
+    "less": "^1.7.5",
+    "lodash": "~3.8.0",
+    "lout": "~5.0.1",
+    "moonboots_hapi": "~2.4.0"
+  },
+  "devDependencies": {}
+}

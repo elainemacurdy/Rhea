@@ -1,0 +1,257 @@
+/*
+   TESTED AND PASSED ON JAN 23 2015 by Eric
+
+  Tested with the latest version of the browsers.
+
+  PC:
+  - Chrome
+  - Firefox
+  - IE
+  - Safari
+
+*/
+ 
+ /* !!!! REMOVE OLD BUTTON CSS   */
+
+.button {
+  display: inline-block;
+  background-color: @veryLightGrey;
+  padding: 0px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  vertical-align: top;
+  border: 1px solid transparent; // on focus a border is added. This prevents jumping. Didn't want to take away the default focus style
+  > .icn12x12 {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 8px;
+    top: 6px;
+  }
+
+  > .text {
+    padding: 6px 12px 6px 8px; // 26px height
+  }
+
+  > .icn12x12 + .text {
+    margin-left: 20px; // if left icon exists, move text to the right
+  }
+
+  &.vertical {
+    transform: rotate(90deg);
+    transform-origin: 15% 50%; // aligns to the top left. this could be buggy if you add multiple
+    .text {
+      white-space: nowrap;
+    }
+  }
+
+
+  &.isDefault {
+    background-color: @darkGrey;
+    color: #FFFFFF;
+  }
+
+
+
+
+
+  &.isDefault:hover {
+    background-color: black;
+  }
+
+  &.selected {
+    background-color: @darkGrey;
+
+    .text {
+      color: #FFFFFF;
+    }
+  }
+
+  &.selected:hover {
+    background-color: #000!important;
+  }
+
+  &.disabled, &.disabled:hover {
+    background-color: @ultraLightGrey;
+    color: @lightGrey;
+    cursor: default;
+
+    * {
+      cursor: default;
+    }
+  }
+
+  &.toggle {
+    overflow: hidden;
+    max-height: 24px;
+
+    .text {
+      padding-right: 20px;
+
+      div {
+        min-height: 24px;
+        white-space: nowrap;
+      }
+    }
+
+    .icn12x12 {
+      position: absolute;
+      right: 0px;
+      left: initial;
+      margin-left: 10px;
+    }
+  }
+
+  &.medium {
+    padding: 10px 15px 10px 15px;
+    min-width: 80px;
+    text-align: center;
+  }
+
+  &.large {
+    padding: 25px 25px 25px 25px;
+    min-width: 80px;
+    text-align: center;
+  }
+
+  &.action {
+    background: #000;
+
+    .text {
+      color: #FFF;
+    }
+  }
+}
+
+.splitButton {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: top;
+  position: relative;
+  display: inline-block;
+
+  > .button {
+    display: block !important;
+    margin-right: 30px;
+  }
+
+  > .buttonIcon {
+    margin-right: 0px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+}
+
+.labelButton {
+  display: inline-block;
+  position: relative;
+
+  > .text {
+    display: block !important;
+    margin-right: 30px;
+    padding: 7px 8px 7px 8px;
+    color: @darkGrey;
+  }
+
+  > .buttonIcon {
+    margin-right: 0px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+}
+
+.dialog {
+  .buttons {
+    text-align: right;
+
+    .button {
+      padding: 15px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.buttonIcon {
+  min-width: 24px;
+  min-height: 24px;
+  line-height: 1px;
+  display: inline-block;
+  text-align: center;
+  color: #555;
+  border: 1px solid transparent;
+  vertical-align: top;
+
+  &.selected {
+    background-color: @darkGrey;
+  }
+
+  &.selected:hover {
+    background-color: #000!important;
+  }
+
+
+  & > [class^="icn"] {
+    opacity: .7;
+  }
+
+  > .icn12x12 {
+    margin: 6px; // centers icon
+  }
+
+
+  &.action {
+    background: #000;
+
+    .text {
+      color: #FFF;
+    }
+  }
+
+  &.selected {
+    background: #000;
+
+    .text {
+      color: #FFF;
+    }
+  }
+}
+
+
+/*********************************************************
+     * BRANDING
+      Sets colors according to brand
+*********************************************************/
+
+.isMedia {
+  .labelButton {
+    &:hover{
+      background-color: @mediaLightColor;
+    }
+  }
+  .splitButton {
+    &:hover{
+      background-color: @mediaLightColor;
+    }
+  }
+
+  .button {
+    &:hover {
+      background-color: @mediaLightColor;
+    }
+  }
+
+  .buttonIcon {
+
+    &:hover {
+      background-color: @mediaLightColor;
+
+      > [class^="icn"]:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

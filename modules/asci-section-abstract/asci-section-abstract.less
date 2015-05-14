@@ -1,0 +1,261 @@
+@controlWidth: 15px;
+@dropShadowWidth: 3px;
+@helpWidth: 225px;
+@rightGutterWidth: 10px + @dropShadowWidth;
+@smlSectionMinWidth: 250px;
+@medSectionMinWidth: 500px;
+@lrgSectionMinWidth: 800px;
+@standardFontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@headerFontFamily: Verdana, Geneva, sans-serif;
+
+body, td, input, select, textarea, div, button, span {
+  color: @midDarkGrey;
+  font-size: 12px;
+  font-family: @standardFontFamily;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  color: @darkGrey;
+  font-family: @headerFontFamily;
+  font-weight: normal;
+}
+
+h2, .h2 {
+  font-size: 22px;
+}
+
+h3, .h3 {
+  font-size: 18px;
+}
+
+h4, .h4 {
+  font-size: 16px;
+}
+
+h5, .h5 {
+  font-size: 14px;
+}
+
+h6, .h6 {
+  font-size: 13px;
+}
+
+h1:empty, .h1:empty,
+h2:empty, .h2:empty,
+h3:empty, .h3:empty,
+h4:empty, .h4:empty,
+h5:empty, .h5:empty,
+h6:empty, .h6:empty {
+ display: none !important;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none !important;
+  }
+  &:active {
+    outline: 0;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+p {
+  line-height: 1.6em;
+  margin: 10px 0px 10px 0px;
+}
+.textSmall {
+  font-size: 11px;
+  font-weight: normal;
+}
+
+em.highlight {
+  font-style: inherit;
+  background-color: #FFFF99;
+}
+
+
+.section {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  white-space: normal;
+  overflow: hidden;
+
+  &.minimized {
+    .minimizedHandle {
+      display: block;
+      border-right: 1px solid @borderColor;
+    }
+    .navigation, .horizontalScroll {
+      display: none !important;
+    }
+    .controls .maximize {
+      display: inline-block;
+    }
+    .controls.canMinimize .minimize {
+      display: none;
+    }
+  }
+
+  .controls {
+    position: absolute;
+    top: 8px;
+    right: @rightGutterWidth;
+    font-size: 0px; /* get rid of spaces between inline elements */
+    overflow: visible;
+    z-index: 2;
+
+    .control {
+      display: none;
+      width: @controlWidth;
+      height: @controlWidth;
+      font-size: @baseFontSize;
+      text-align: center;
+      cursor: pointer;
+
+      .maximize {
+        display: none;
+      }
+    }
+    .verbose {
+      display: inline-block;
+    }
+
+    &.canClose .close,
+    &.canMinimize .minimize {
+      display: inline-block;
+    }
+  }
+
+  .minimizedHandle {
+    display: none;
+    height: 100%;
+  }
+
+  .navigation, .horizontalScroll, .content, .header, .body, .footer, .help {
+    position: absolute;
+  }
+
+  .navigation, .content .body, .help {
+    overflow: auto;
+  }
+  .horizontalScroll {
+    overflow-x: auto;
+    margin: 0px @rightGutterWidth 0px 15px;
+  }
+
+  .footer, .header, .help, .navigation {
+    display: none;
+  }
+
+  &.hasFooter {
+    .footer {
+      display: block;
+    }
+  }
+
+  &.hasHeader {
+    .header {
+      display: block;
+    }
+  }
+
+  &.hasNavigation {
+    .navigation {
+      display: block;
+    }
+    .horizontalScroll {
+      left: 200px;
+    }
+  }
+
+  &.hasHelp {
+    .help {
+      right: 0px;
+    }
+    .content {
+      right: @helpWidth;
+    }
+    .minWidth {
+      min-width: @medSectionMinWidth + @helpWidth;
+    }
+  }
+
+  .body {
+    top: 0px;
+  }
+  .body, .help {
+    padding: 5px 0px 10px 0px;
+  }
+  .navigation, .horizontalScroll, .content {
+    top: 0px;
+    bottom: 0px;
+  }
+  .content, .horizontalScroll, .body, .footer {
+    left: 0px;
+    right: 0px;
+  }
+  .header {
+    left: -1px; // header doesn't line up with content below for some reason. -1px offsets it so it does.
+    right: 0;
+    padding: 20px 0 15px 0;
+    z-index: 1;
+    position: relative; // forms didn't scroll under header without z-index
+    .boxShadow(@yOffset: @dropShadowWidth; @blur: 2px; @spread: -2px; @color: @borderColor;);
+
+    .search {
+      position: absolute;
+      right: 0px;
+      top: 25px;
+    }
+  }
+  .help {
+    right: -@helpWidth;
+    width: @helpWidth;
+    .transition(@property: right; @duration: @medTransition);
+
+    .gutter {
+      padding-left: 15px;
+    }
+  }
+  .footer, .help {
+    bottom: 0px;
+  }
+
+  .navigation {
+    width: 200px;
+
+    .treeWrapper {
+      padding-left: 15px;
+    }
+  }
+
+  .minWidth {
+    position: relative;
+    height: 100%;
+    min-width: @medSectionMinWidth;
+  }
+
+  .content {
+    display: inline-block;
+    .transition(@property: right; @duration: @medTransition);
+
+    .footer {
+      padding: 15px 0px 15px 0px;
+      .boxShadow(@yOffset: -@dropShadowWidth; @blur: 2px; @spread: -2px; @color: @midLightGrey;);
+    }
+  }
+
+  .ui-resizable-e {
+     border-right: 3px solid @darkGrey;
+  }
+}

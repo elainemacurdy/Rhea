@@ -1,0 +1,22 @@
+<div class="header" data-hook="pageHeader">
+  <div class="leftContent">
+    <div class="logo"></div>
+    <div class="tabs">
+      <a href="javascript:void(0)" class="button">
+        <div class="text" data-hook="dataLabel"></div>
+      </a>
+      <a href="javascript:void(0)" class="button selected">
+        <div class="text" data-hook="mediaLabel"></div>
+      </a>
+      <a href="javascript:void(0)" class="button">
+        <div class="text" data-hook="insightsLabel">Insights</div>
+      </a>
+    </div>
+    <div class="options">
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="rightContent">
+  </div>
+  <div class="clearfix"></div>
+</div>

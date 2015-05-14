@@ -1,0 +1,33 @@
+<div class="section" data-hook="section">
+  <div class="controls" data-hook="controls">
+    <!--div class="control verbose">V</div-->
+    <div class="control minimize" title="Minimize">
+      <div class="icn12x12 icnCollapseHorizontalDark"></div>
+    </div>
+    <div class="control maximize" title="Open">
+      <div class="icn12x12 icnExpandHorizontalDark"></div>
+    </div>
+    <div class="control close" title="Close">
+      <div class="icn12x12 icnCloseDark"></div>
+    </div>
+  </div>
+  <div class="navigation"></div>
+  <div class="horizontalScroll">
+    <div class="minWidth">
+      <div class="header">
+        <h6 data-hook="pretitle"></h6>
+        <h3 data-hook="title"></h3>
+        <h4 data-hook="subtitle"></h4>
+        <div data-hook="search" class="search"></div>
+      </div>
+      <div class="content">
+        <div class="body" data-hook="content"></div>
+        <div class="footer" data-hook="footer"></div>
+      </div>
+      <div class="help">
+        <div class="gutter"></div>
+      </div>
+    </div>
+  </div>
+  <div class="minimizedHandle"></div>
+</div>

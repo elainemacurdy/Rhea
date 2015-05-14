@@ -1,0 +1,41 @@
+{
+  "name": "asci-global-registry",
+  "version": "1.0.0",
+  "description": "Module for global register of views and model classes.",
+  "homepage": "https://helios.audiencescience.com",
+  "bugs": {
+    "url": "http://jira.uscorp.audsci.com/secure/RapidBoard.jspa?rapidView=98&view=planning"
+  },
+  "main": "asci-global-registry.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "../../node_modules/.bin/eslint --quiet *.js ./**/*.js",
+    "test": "../../node_modules/.bin/browserify test/index.js | ../../node_modules/.bin/tape-run | ../../node_modules/.bin/tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.uscorp.audsci.com:7999/asci/monoceros.git"
+  },
+  "publishConfig": {
+    "registry": "http://npmrepo.ascitest.net:4444"
+  },
+  "keywords": [
+    "registry"
+  ],
+  "author": "Elaine Harman <elaine.harman@audiencescience.com>",
+  "license": "ASI",
+  "dependencies": {
+    "ampersand-registry": "^0.2.2"
+  },
+  "devDependencies": {
+    "ampersand-view-conventions": "1.1.4-asci",
+    "browserify": "^6.1.0",
+    "function-bind": "^1.0.0",
+    "phantomjs": "^1.9.10",
+    "tap-spec": "^1.0.0",
+    "tape": "^3.0.1",
+    "tape-run": "^0.3.0"
+  }
+}

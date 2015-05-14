@@ -1,0 +1,3 @@
+<div class="button" data-hook="button">
+  <label class="label" data-hook="label"></label>
+</div>

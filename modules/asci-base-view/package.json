@@ -1,0 +1,40 @@
+{
+  "name": "asci-base-view",
+  "version": "2.0.0",
+  "description": "Base view for AmpersandViews",
+  "main": "asci-base-view.js",
+  "style": "asci-base-view.less",
+  "scripts": {
+    "cover": "browserify -t coverify test/index.js | tape-run | coverify -o coverage | tap-spec",
+    "lint": "eslint --quiet *.js ./**/*.js",
+    "templates": "../../node_modules/.bin/domthing templates > templates.js",
+    "test": "../../node_modules/.bin/browserify test/index.js | ../../node_modules/.bin/tape-run | ../../node_modules/.bin/tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.uscorp.audsci.com:7999/asci/monoceros.git"
+  },
+  "publishConfig": {
+    "registry": "http://npmrepo.ascitest.net:4444"
+  },
+  "keywords": [
+    "ui",
+    "view"
+  ],
+  "author": "Elaine Harman <elaine.harman@audiencescience.com>",
+  "license": "ASI",
+  "dependencies": {
+    "ampersand-view": "^7.1.4",
+    "jquery": "^2.1.1",
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "ampersand-view-conventions": "1.1.4-asci",
+    "browserify": "^6.1.0",
+    "function-bind": "^1.0.0",
+    "phantomjs": "^1.9.10",
+    "tap-spec": "^1.0.0",
+    "tape": "^3.0.1",
+    "tape-run": "^0.3.0"
+  }
+}

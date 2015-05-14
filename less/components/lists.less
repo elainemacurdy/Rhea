@@ -1,0 +1,52 @@
+.navList {
+  .button {
+    width: 100%;
+    margin-bottom: 1px;
+    background-color: #fff;
+  }
+
+  .divider {
+    font-size: 1px;
+    line-height: 1px;
+    border-bottom: 1px solid @lightGrey;
+    margin: 8px 0;
+  }
+
+  &.vertical {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 45px;
+    bottom: 0px;
+    background: @veryLightGrey;
+    overflow: hidden;
+
+    .buttonIcon {
+      margin: 10px 0 0 7px;
+    }
+
+    .button {
+      opacity: .7;
+      width: auto !important;
+      background: @veryLightGrey;
+
+      .text {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.labelsList {
+  &.wrap {
+    .labelButton {
+      float: left !important;
+      margin-right: 1px;
+    }
+  }
+
+  .labelButton {
+    margin-bottom: 1px;
+    background-color: @veryLightGrey;
+  }
+}

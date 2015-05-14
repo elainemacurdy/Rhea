@@ -1,0 +1,36 @@
+{
+  "name": "asci-base-model",
+  "version": "2.0.0",
+  "description": "A module for the base model from which all other models are extended.",
+  "homepage": "http://ui.ascitest:9090",
+  "bugs": {
+    "url": "http://jira.uscorp.audsci.com/secure/RapidBoard.jspa?rapidView=98&view=planning&selectedIssue=UI-124"
+  },
+  "main": "asci-base-model.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "../../node_modules/.bin/eslint --quiet *.js ./**/*.js",
+    "test": "../../node_modules/.bin/tape test/index.js | ../../node_modules/.bin/tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.uscorp.audsci.com:7999/asci/monoceros.git"
+  },
+  "publishConfig": {
+    "registry": "http://npmrepo.ascitest.net:4444"
+  },
+  "keywords": [
+    "model"
+  ],
+  "author": "Stefan Tennigkeit <stefan.tennigkeit@audiencescience.com>",
+  "license": "ASI",
+  "dependencies": {
+    "hat": "0.0.3"
+  },
+  "devDependencies": {
+    "asci-tap-spec": "^2.1.0-asci",
+    "tape": "^3.0.1"
+  }
+}

@@ -1,0 +1,193 @@
+/*input[type='text'] {
+  border: 1px solid @borderColor;
+  line-height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  &.number {
+    text-align: right;
+  }
+}*/
+
+
+/* NEW UI */
+/*********************************************************
+    * BROWSER OVERRIDES
+ *********************************************************/
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  color: @midGrey;
+  font-style: italic !important;
+}
+
+//focus borders
+textarea:focus, input:focus, button:focus, a:focus {
+  outline: 0;
+  border: 1px solid @mediaMidColor !important; // should follow brand color
+  opacity: 1 !important;
+}
+
+input:focus {
+  // for forms with buttons like search
+  & + .buttonIcon {
+    border-color: @mediaMidColor !important;
+    opacity: 1 !important;
+  }
+}
+
+/*********************************************************
+    * GENERAL FORMS
+ *********************************************************/
+input[type='password'],
+input[type='text'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='date'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='range'],
+input[type='search'],
+input[type='url'],
+input[type='week']{
+  border: 1px solid @borderColor;
+  padding-left: 8px;
+  padding-right: 8px;
+  min-height: 26px;
+  vertical-align: top;
+  width:100%;
+  max-width:600px;
+}
+
+input[type='search']::-webkit-search-cancel-button{ 
+  position:relative;
+  right:20px;
+}
+
+
+/*********************************************************
+    * SEARCH FORMS
+ *********************************************************/
+.formWithButton {
+  position: relative;
+  max-width: 600px;
+  vertical-align: top;
+  display:inline-block;
+  width:100%;
+
+  .formRight {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border: 1px solid @borderColor;
+    border-left: 0px;
+  }
+
+  .formLeft {
+  }
+}
+
+/*********************************************************
+    * TEXT FORMS
+ *********************************************************/
+.formText {
+  position: relative;
+  vertical-align: top;
+  display:inline-block;
+  width:100%;
+  max-width: 600px;
+
+  &.prefix{
+    input{
+      padding-left:25px;
+    }
+    div{
+      position:absolute;
+      top:0px;
+      left:0px;
+      bottom:0px;
+      border:1px solid @borderColor;
+      background:@ultraLightGrey;
+      width:18px;
+      line-height:24px;
+      text-align:center;
+      z-index:1;
+    }
+  }
+
+  &.suffix{
+    input{
+      padding-right:25px;
+    }
+    div{
+      position:absolute;
+      top:0px;
+      right:0px;
+      bottom:0px;
+      border:1px solid @borderColor;
+      z-index:1;
+      width:18px;
+      line-height:24px;
+      text-align:center;
+      background:@ultraLightGrey;
+    }
+  }
+
+  input:focus + div{
+    border-color: @mediaMidColor !important;
+  }
+
+}
+
+/*********************************************************
+    * RADIO BUTTONS
+ *********************************************************/
+
+.formChoose{
+  position:relative;
+  input{
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:12px;
+    height:12px;
+
+    &.checkbox:checked + .text > .icon{
+      background:green;
+    }
+
+    &.radio:checked + .text > .icon{
+       background:green;
+    }
+
+    &.checkbox:focus + .text > .icon{
+      border:1px solid black;
+    }
+
+    &.radio:focus + .text > .icon{
+      border:1px solid black;
+    }
+  }
+  .icon{
+    position:absolute;
+    left:0px;
+    top:0px;
+    display:block;
+    background:#eaeaea;
+    width:12px;
+    height:12px;
+    border:1px solid transparent;
+  }
+  .text{
+    margin:1px 0 0 20px;
+    display:inline-block;
+  }
+}
+
+.chooseGroup{
+  .formChoose{
+    margin:0 0 10px 0;
+  }
+}

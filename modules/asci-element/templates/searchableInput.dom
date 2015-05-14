@@ -1,0 +1,4 @@
+<div class="searchableInput" data-hook="searchable-input">
+  <a href="javascript:void(0);" class="inputButton clearButton" data-hook="clear-button"></a>
+  <a href="javascript:void(0);" class="inputButton searchButton" data-hook="search-button"></a>
+</div>

@@ -1,0 +1,12 @@
+/**************************************************************************
+    OPACITY
+
+    Functions that build opacity
+
+**************************************************************************/
+.opacity(@percent: 1){
+    -webkit-opacity: @percent;
+    -moz-opacity: @percent;
+    opacity: @percent;
+    filter: alpha(opacity=@percent);
+}

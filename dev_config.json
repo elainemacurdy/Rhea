@@ -1,0 +1,29 @@
+{
+    "isDev": true,
+    "session": {
+        "host": "localhost",
+        "port": 6379,
+        "db": 1,
+        "secret": "bang!",
+        "secure": false
+    },
+    "http": {
+        "listen": "0.0.0.0",
+        "port": 9999
+    },
+    "client": {
+        "apiPath": "api/v1",
+        "appPage": "",
+        "debugMode": true,
+        "loginPage": "",
+        "urlRoot": "/"
+    },
+    "apiProxy": "localhost",
+    "apiProxySettings": {
+        "localhost": {
+            "context": "/",
+            "domain": "localhost",
+            "port": 9040
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.transition(@property; @duration: .5s; @delay: 0s; @timingFunction: ease) {
+    transition: @arguments;
+    -webkit-transition: @arguments;
+    -moz-transition: @arguments;
+    -o-transition: @arguments;
+    -ms-transition: @arguments;
+}
+.transition(filter; @duration: .5s; @delay: 0s; @timingFunction: ease) {
+    transition: -webkit-filter @duration @delay @timingFunction;
+}

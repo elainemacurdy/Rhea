@@ -1,0 +1,104 @@
+.form {
+  min-width: 1300px; // the location form is pretty wide. it won't be this wide in the new design
+
+  input[type=text], input[type=number], textarea {
+    vertical-align: middle;
+  }
+  input[type=text] {
+    width: 400px;
+  }
+  input[type=number] {
+    width: 125px;
+  }
+
+  select {
+    width: 250px;
+  }
+  select[multiple=multiple] {
+    margin-top: 15px;
+  }
+
+  p {
+    margin-top: 0px;
+  }
+
+  .formComponent {
+    line-height: 3.5em;
+    border-bottom: 1px solid @midLightGrey;
+
+    &.breakAt {
+      border-bottom: none;
+    }
+
+    &.hasSeparator {
+      border-bottom: 3px double @midLightGrey;
+    }
+
+    .fieldValue {
+      .addInput {
+        display: block;
+        line-height: normal;
+        padding: 7px 10px;
+        margin: 8px 0 1px 0;
+        &:hover {
+          background-color: lighten(@mediaLightColor, 3%);
+        }
+      }
+    }
+  }
+
+  .label {
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+  }
+
+  .fieldValue {
+    display: inline-block;
+
+    label {
+      white-space: nowrap;
+    }
+
+    .label {
+      width: auto;
+    }
+  }
+
+  .collection {
+    line-height: normal;
+    margin-top: 1.15em;
+    margin-bottom: 1.15em;
+  }
+
+  .collectionValue {
+    line-height: normal;
+    background-color: @mediaLightColor;
+    padding: 5px 10px 6px 10px;
+
+    button {
+      display: inline-block;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      div {
+        margin-top: 3px;
+      }
+    }
+  }
+
+  .checkboxInput {
+    .description {
+      padding-left: 5px;
+    }
+  }
+
+  .hasSeparator {
+    border-bottom: 1px solid @midLightGrey;
+    padding-bottom: 1px;
+  }
+}
+
+.message-error {
+  color: @brandRed;
+}

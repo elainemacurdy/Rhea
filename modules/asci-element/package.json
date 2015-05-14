@@ -1,0 +1,48 @@
+{
+  "name": "asci-element",
+  "version": "1.0.0",
+  "description": "Module to encapsulate very simple, single-node elements for easy addition to larger views",
+  "homepage": "https://helios.audiencescience.com",
+  "bugs": {
+    "url": "http://jira.uscorp.audsci.com/secure/RapidBoard.jspa?rapidView=98&view=planning"
+  },
+  "main": "asci-element.js",
+  "style": "asci-element.less",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "cover": "../../node_modules/.bin/browserify -t coverify test/index.js | ../../node_modules/.bin/tape-run | ../../node_modules/.bin/coverify -o coverage | ../../node_modules/.bin/tap-spec",
+    "lint": "../../node_modules/.bin/eslint --quiet *.js ./**/*.js",
+    "templates": "../../node_modules/.bin/domthing templates > templates.js",
+    "test": "../../node_modules/.bin/browserify test/index.js | ../../node_modules/.bin/tape-run | ../../node_modules/.bin/tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.uscorp.audsci.com:7999/asci/monoceros.git"
+  },
+  "publishConfig": {
+    "registry": "http://npmrepo.ascitest.net:4444"
+  },
+  "keywords": [
+    "element",
+    "anchor",
+    "label",
+    "checkbox",
+    "input",
+    "select",
+    "textarea",
+    "span",
+    "div",
+    "p"
+  ],
+  "author": "Elaine Harman <elaine.harman@audiencescience.com>",
+  "license": "ASI",
+  "dependencies": {
+    "domthing": "^0.4.0"
+  },
+  "devDependencies": {
+    "asci-tap-spec": "^2.1.0-asci",
+    "tape": "^3.0.1"
+  }
+}

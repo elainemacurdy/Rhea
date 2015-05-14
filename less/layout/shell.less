@@ -1,0 +1,156 @@
+@headerBorderHeightExpanded: 4px;
+@headerButtonWidth: 85px;
+@headerHeightCollapsed: 10px;
+@headerHeightExpanded: 50px;
+@scrollbarTrackColor: @ultraLightGrey;
+@scrollbarThumbColor: @borderColor;
+@scrollbarContrastColor: @borderColor;
+
+/*********************************************************
+ * GLOBAL ELEMENTS
+ *********************************************************/
+body {
+  background-color: #FFFFFF;
+  margin: 0px;
+  overflow: hidden;
+  &.allowScrolling {
+    overflow: auto;
+
+    .section {
+      overflow: hidden !important;
+    }
+  }
+}
+
+div, html {
+  /* IE scrollbars */
+  scrollbar-base-color: @scrollbarThumbColor;
+  scrollbar-3dlight-color: @scrollbarThumbColor;
+  scrollbar-highlight-color: @scrollbarThumbColor;
+  scrollbar-track-color: @scrollbarTrackColor;
+  scrollbar-arrow-color: @scrollbarContrastColor;
+  scrollbar-shadow-color: @scrollbarThumbColor;
+  scrollbar-darkshadow-color: @scrollbarThumbColor;
+  /* Webkit scrollbars */
+  &::-webkit-scrollbar-track {
+    background-color: @scrollbarTrackColor;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #FFFFFF;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: @scrollbarThumbColor;
+  }
+}
+
+
+/*********************************************************
+ * UTILITY
+ *********************************************************/
+.dropShadowRight {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  .appBackgroundImage(@file: "dropShadow.x.right.png");
+  background-repeat-x: no-repeat;
+  background-position: top right;
+}
+
+.dropShadowLeft {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  .appBackgroundImage(@file: "dropShadow.x.left.png");
+  background-repeat-x: no-repeat;
+  background-position: top left;
+}
+
+.dropShadowTop {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  .appBackgroundImage(@file: "dropShadow.y.top.png");
+  background-repeat-y: no-repeat;
+  background-position: top left;
+}
+
+.dropShadowBottom {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  .appBackgroundImage(@file: "dropShadow.y.bottom.png");
+  background-repeat-y: no-repeat;
+  background-position: bottom left;
+}
+
+
+/*********************************************************
+ * PAGE
+ *********************************************************/
+.page {
+  .transition(@property: filter, opacity; @duration: @fastTransition);
+}
+
+.page.blur {
+  .blur();
+  opacity: 0.4;
+}
+
+
+/*********************************************************
+ * CONTENT SECTION
+ *********************************************************/
+.pageContent {
+  position: absolute;
+  top: 33px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 0;
+  white-space: nowrap;
+  border-bottom:3px solid @darkGrey;
+
+  .transition(@property: top, @duration: @slowTransition);
+
+  &.collapsed, &.expanded {
+    top: 20px;
+  }
+
+  &.useSectionTransitioning .section {
+    .transition(@property: width; @duration: @medTransition);
+  }
+}
+
+
+/*********************************************************
+ * GENERAL CLASSES
+ *********************************************************/
+.deemphasize {
+  color: @midGrey;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* IE7 */

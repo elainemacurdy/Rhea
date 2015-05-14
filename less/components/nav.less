@@ -1,0 +1,106 @@
+.contentNav {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  min-height: 500px;
+
+  .navHeader {
+    position: absolute;
+    border-bottom: 1px solid @borderColor;
+    top: 0px;
+    height: 60px;
+    left: 0px;
+    right: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .subHead {
+      opacity: .7;
+      margin-top: 15px;
+    }
+
+    .title {
+      padding: 0px;
+      overflow: hidden;
+      white-space: nowrap;
+      line-height: 16px;
+      border-color: transparent;
+      width: 100%;
+
+      &:focus {
+        font-size: 12px;
+        color: @darkGrey !important;
+        font-family: @standardFontFamily;
+        padding-left: 5px;
+        line-height: 12px;
+      }
+    }
+  }
+
+  .navBody {
+    padding-top: 8px;
+    position: absolute;
+    top: 61px;
+    bottom: 110px;
+    right: 0px;
+    left: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: auto;
+
+    .button {
+      width: 98.99%; //100% causes small scroll
+
+      &.selected{
+         background-color: @mediaColor;
+         .text{
+           color: #FFFFFF;
+         }
+      }
+    }
+  }
+
+  .navFooter {
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    height: 110px;
+
+    .button {
+      width: 98.99%;
+      border-top: 1px solid @borderColor;
+
+      .text {
+        color: @darkGrey;
+        padding: 10px 8px;
+      }
+
+      .icn12x12 {
+        top: 10px;
+        left: 10px;
+      }
+    }
+  }
+}
+
+
+/*********************************************************
+     * BRANDING
+      Sets colors according to brand
+*********************************************************/
+
+.isMedia {
+  .navBody {
+    .button {
+      &.selected{
+         background-color: @mediaColor;
+         .text{
+           color: #FFFFFF;
+         }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.button {
+  color: @darkGrey;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 2.2em;
+  margin-right: 10px;
+  padding: 0px 7px 0px 7px;
+
+  * {
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: @veryLightGrey;
+  }
+
+  &.formButton {
+    background-color: @veryLightGrey;
+    min-width:80px;
+    padding:20px 20px;
+    text-align:center;
+
+    &.isDefault {
+      background-color: @darkGrey;
+      color: #FFFFFF;
+    }
+    &.isDefault:hover {
+      background-color: lighten(@darkGrey, 10%);
+    }
+
+    &.disabled, &.disabled:hover {
+      background-color: @ultraLightGrey;
+      color: @lightGrey;
+      cursor: default;
+
+      * {
+        cursor: default;
+      }
+    }
+  }
+}
+
+.dialog {
+  .buttons {
+    text-align: right;
+
+    .button {
+      padding: 15px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.buttonIcon {
+  width: 25px;
+  height: 25px;
+  display: block;
+  text-align: center;
+  line-height: 2.2em;
+  border: 1px solid transparent;
+
+  > .icn12x12 {
+    margin: 6px; // centers icon
+  }
+
+  // &:hover {
+    // background-color: @hoverLightColor;
+  // }
+}

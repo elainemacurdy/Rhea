@@ -1,0 +1,18 @@
+.gradient(@top: #000000; @bottom: #FFFFFF; @topPercent: 0%; @fallback: #FFFFFF; @file: none;) {
+    background: @fallback; /* Old browsers */
+    background: -moz-linear-gradient(top, @top @topPercent,  @bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@topPercent, @top), color-stop(100%, @bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, @top @topPercent, @bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @top @topPercent, @bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @top @topPercent, @bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom, @top @topPercent, @bottom 100%); /* W3C */
+}
+.gradient(@top: #000000; @bottom: #FFFFFF; @topPercent: 0%; @fallback: #FFFFFF; @file: none;) when (@file) {
+    background: ~"url(../images/icons/@{file})", @fallback; /* Old browsers */
+    background: ~"url(../images/icons/@{file})", -moz-linear-gradient(top, @top @topPercent,  @bottom 100%); /* FF3.6+ */
+    background: ~"url(../images/icons/@{file})", -webkit-gradient(linear, left top, left bottom, color-stop(@topPercent, @top), color-stop(100%, @bottom)); /* Chrome,Safari4+ */
+    background: ~"url(../images/icons/@{file})", -webkit-linear-gradient(top, @top @topPercent, @bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: ~"url(../images/icons/@{file})", -o-linear-gradient(top, @top @topPercent, @bottom 100%); /* Opera 11.10+ */
+    background: ~"url(../images/icons/@{file})", -ms-linear-gradient(top, @top @topPercent, @bottom 100%); /* IE10+ */
+    background: ~"url(../images/icons/@{file})", linear-gradient(to bottom, @top @topPercent, @bottom 100%); /* W3C */
+}

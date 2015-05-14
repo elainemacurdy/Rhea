@@ -1,0 +1,34 @@
+{
+  "name": "asci-constants",
+  "version": "1.0.0",
+  "description": "<> with ❤ by ASCI",
+  "homepage": "http://ui.ascitest:9090",
+  "bugs": {
+    "url": "http://jira.uscorp.audsci.com/secure/RapidBoard.jspa?rapidView=98&view=planning&selectedIssue=UI-124"
+  },
+  "main": "asci-constants.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "../../node_modules/.bin/eslint --quiet *.js ./**/*.js",
+    "test": "../../node_modules/.bin/tape test/index.js | ../../node_modules/.bin/tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.uscorp.audsci.com:7999/asci/monoceros.git"
+  },
+  "publishConfig": {
+    "registry": "http://npmrepo.ascitest.net:4444"
+  },
+  "keywords": [
+    "config"
+  ],
+  "author": "Stefan Tennigkeit <stefan.tennigkeit@audiencescience.com>",
+  "license": "ASI",
+  "dependencies": {},
+  "devDependencies": {
+    "tap-spec": "^1.0.1",
+    "tape": "^3.0.1"
+  }
+}

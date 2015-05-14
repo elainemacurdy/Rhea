@@ -1,0 +1,32 @@
+@searchButtonIconWidth: 22px;
+@searchButtonRightGutter: 1px; // offset for the border
+
+.search {
+  input {
+    width: 260px;
+  }
+
+  .searchButton {
+    right: @searchButtonRightGutter;
+    .appBackgroundImage(@file: 'icons/icnSearchLight.png');
+    background-position: center left;
+  }
+
+  .clearButton {
+    right: @searchButtonIconWidth + @searchButtonRightGutter;
+    .appBackgroundImage(@file: 'icons/icnClearLight.png');
+    background-position: center center;
+  }
+}
+
+.inputButton {
+  background-repeat: no-repeat;
+  height: 28px;
+  position: absolute;
+  top: 1px; // offset for the border
+  width: @searchButtonIconWidth;
+}
+
+.inputButton + input {
+  padding-right: (@searchButtonIconWidth * 2) + @searchButtonRightGutter;
+}

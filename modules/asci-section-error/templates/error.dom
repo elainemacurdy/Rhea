@@ -1,0 +1,4 @@
+<div class="appError">
+  <span data-hook="generic-error-message"></span>
+  <span data-hook="specific-error-message"></span>
+</div>

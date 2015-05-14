@@ -1,0 +1,16 @@
+﻿/**************************************************************************
+    SHARED IMAGE BACKGROUND
+
+    .less has a relative path bug. This is a workaround to that. It
+    escapes the url string so it doesn't get processed.
+
+**************************************************************************/
+.appBackgroundImage(@file: "icn-plus.png", @app: "public")
+{
+    background-image: ~"url(/client/@{app}/images/@{file})";
+}
+
+.moduleBackgroundImage(@file: "icn-plus.png", @module: "")
+{
+    background-image: ~"url(/modules/@{module}/images/@{file})";
+}

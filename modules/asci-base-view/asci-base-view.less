@@ -1,0 +1,62 @@
+/*********************************************************
+    * BROWSER OVERRIDES
+ *********************************************************/
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  color: @midGrey;
+  font-style: italic !important;
+}
+
+//focus borders
+textarea:focus, input:focus, button:focus, a:focus {
+  outline: 0;
+  // border: 1px solid @mediaMidColor !important;
+  // opacity: 1 !important;
+}
+
+input:focus {
+  // for forms with buttons like search
+  & + .buttonIcon {
+    border-color: @mediaMidColor !important;
+    opacity: 1 !important;
+  }
+}
+
+/*********************************************************
+    * GENERAL FORMS
+ *********************************************************/
+input[type='password'],
+input[type='text'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='date'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='range'],
+input[type='search'],
+input[type='url'],
+input[type='week']{
+  border: 1px solid @borderColor;
+  padding-left: 8px;
+  padding-right: 8px;
+  min-height: 26px;
+  vertical-align: top;
+  max-width: 600px;
+}
+
+input[type='search']::-webkit-search-cancel-button{
+  position: relative;
+  right: 20px;
+}
+
+/*********************************************************
+    * UTILITY CLASSES
+ *********************************************************/
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

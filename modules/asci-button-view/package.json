@@ -1,0 +1,38 @@
+{
+  "name": "asci-button-view",
+  "version": "1.0.0",
+  "description": "A module to encapsulate all incarnations of global application buttons.",
+  "main": "asci-button-view.js",
+  "style": "asci-button-view.less",
+  "scripts": {
+    "cover": "../../node_modules/.bin/browserify -t coverify test/index.js | ../../node_modules/.bin/tape-run | ../../node_modules/.bin/coverify -o coverage | ../../node_modules/.bin/tap-spec",
+    "lint": "../../node_modules/.bin/eslint --quiet *.js ./**/*.js",
+    "templates": "../../node_modules/.bin/domthing templates > templates.js",
+    "test": "../../node_modules/.bin/browserify test/index.js | ../../node_modules/.bin/tape-run | ../../node_modules/.bin/tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.uscorp.audsci.com:7999/asci/monoceros.git"
+  },
+  "keywords": [
+    "button",
+    "form"
+  ],
+  "author": "Elaine Harman <elaine.harman@audiencescience.com>",
+  "license": "ASI",
+  "dependencies": {
+    "asci-base-view": "^1.0.3",
+    "domthing": "~0.3.1"
+  },
+  "devDependencies": {
+    "ampersand-view-conventions": "1.1.4-asci",
+    "browserify": "^6.1.0",
+    "function-bind": "^1.0.0",
+    "phantomjs": "^1.9.7-15",
+    "run-browser": "^1.3.1",
+    "domthing": "~0.3.1",
+    "tap-spec": "^1.0.1",
+    "tape": "^3.0.1",
+    "tape-run": "^0.3.0"
+  }
+}

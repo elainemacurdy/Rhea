@@ -1,0 +1,26 @@
+{
+  "name": "asci-i18n",
+  "version": "1.2.1",
+  "description": "Simple lookup of strings by key",
+  "main": "asci-i18n.js",
+  "scripts": {
+    "lint": "../../node_modules/.bin/eslint --quiet *.js ./**/*.js",
+    "test": "echo \"WARN: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.uscorp.audsci.com:7999/asci/monoceros.git"
+  },
+  "publishConfig": {
+    "registry": "http://npmrepo.ascitest.net:4444"
+  },
+  "keywords": [
+    "i18n",
+    "l10n"
+  ],
+  "author": "Stefan Tennigkeit <stefan.tennigkeit@audiencescience.com>",
+  "license": "ASI",
+  "dependencies": {
+    "asci-dict": "^1.0.0"
+  }
+}

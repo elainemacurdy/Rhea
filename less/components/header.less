@@ -1,0 +1,71 @@
+.page {
+  > .header {
+    background: @darkGrey;
+
+    .leftContent {
+      float: left;
+
+      .logo {
+        width: 33px;
+        height: 33px;
+        .appBackgroundImage(@file: "logo.33x33.png", @app: "public");
+        float: left;
+        margin: 0 10px 0 10px;
+      }
+
+      .tabs {
+        float: left;
+
+        .button {
+          padding-top: 3px;
+          padding-bottom: 4px;
+          width: 80px;
+          text-align: center;
+          float: left;
+          background-color: transparent;
+          text-decoration: none;
+
+          .text {
+            color: #fff;
+            text-transform: uppercase;
+          }
+
+          &.selected {
+            background: #fff;
+            font-weight:bold;
+            .text {
+              color: @mediaColor;
+            }
+          }
+        }
+      }
+
+      .options {
+        float: left;
+        margin-left: 20px;
+
+        .buttonIcon {
+          padding: 3px 3px 4px 3px;
+        }
+      }
+    }
+
+    .rightContent {
+      float: right;
+      margin-right: 20px;
+
+      .splitButton {
+        margin-top: 3px;
+        background-color: transparent;
+
+        .button {
+          background-color: transparent;
+
+          .text {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

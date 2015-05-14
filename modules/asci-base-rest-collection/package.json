@@ -1,0 +1,37 @@
+{
+  "name": "asci-base-rest-collection",
+  "version": "1.0.0",
+  "description": "Module to manage global settings for rest collections.",
+  "homepage": "http://ui.ascitest:9090",
+  "bugs": {
+    "url": "http://jira.uscorp.audsci.com/secure/RapidBoard.jspa?rapidView=98&view=planning&selectedIssue=UI-124"
+  },
+  "main": "asci-base-rest-collection.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint --quiet *.js ./**/*.js",
+    "test": "../../node_modules/.bin/tape test/index.js | ../../node_modules/.bin/tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.uscorp.audsci.com:7999/asci/monoceros.git"
+  },
+  "publishConfig": {
+    "registry": "http://npmrepo.ascitest.net:4444"
+  },
+  "keywords": [
+    "rest",
+    "collection"
+  ],
+  "author": "Stefan Tennigkeit <stefan.tennigkeit@audiencescience.com>",
+  "license": "ASI",
+  "dependencies": {
+    "ampersand-rest-collection": "^2.0.4"
+  },
+  "devDependencies": {
+    "asci-tap-spec": "^2.1.0-asci",
+    "tape": "^3.0.1"
+  }
+}
