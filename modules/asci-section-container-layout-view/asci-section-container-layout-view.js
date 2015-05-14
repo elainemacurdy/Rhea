@@ -5,15 +5,17 @@ var BaseView = require('../asci-base-view');
 var GlobalRegistry = require('../asci-global-registry');
 var templateSectionContainer = require('./templates').sectionContainer;
 
+var sectionViews = {
+  ErrorView: require('../asci-section-error'),
+  // ExampleView: require('../asci-section-example')
+};
+
 var SectionContainerView = BaseView.extend({
   type: 'SectionContainerView',
 
   bindings: {
     'model.state': { type: 'class', hook: 'pageContent' },
     'model.useSectionTransitioning': { type: 'booleanClass', hook: 'pageContent' }
-  },
-  props: {
-    sectionViewConfig: 'object'
   },
   template: templateSectionContainer,
 
@@ -45,7 +47,7 @@ var SectionContainerView = BaseView.extend({
       //   // infer it
       //
       // } else {
-      throw new ReferenceError("Please map a View class for " + addSection.getType() + " in asci-section-container-layout-view.viewConfig.", 'SectionContainerView.onAddSections');
+      throw new ReferenceError("Please map a View class for " + addSection.getType() + " in asci-section-container-layout-view.sectionViews.", 'SectionContainerView.onAddSections');
       // }
     }
     var addSectionView = new ViewClass({ model: addSection });
