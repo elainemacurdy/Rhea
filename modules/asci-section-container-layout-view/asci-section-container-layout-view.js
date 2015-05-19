@@ -7,7 +7,6 @@ var templateSectionContainer = require('./templates').sectionContainer;
 
 var sectionViews = {
   ErrorView: require('../asci-section-error'),
-  // ExampleView: require('../asci-section-example')
 };
 
 var SectionContainerView = BaseView.extend({
