@@ -1,10 +1,12 @@
 var ErrorModel = require('../asci-section-error/models/Error');
+var ExampleSection = require('../asci-section-example/models/ExampleSection');
 var GlobalRegistry = require('../asci-global-registry');
 var Router = require('../asci-router');
 
 var RouterRhea = Router.extend({
   _routes: [
     ['', 'def'],
+    ['example', 'example'],
 
     ['error-:code:search', 'error'],
     // this route must be at the end of this list
@@ -12,6 +14,7 @@ var RouterRhea = Router.extend({
   ],
 
   def: function() {
+    this.redirectTo('/example');
   },
 
   error: function(code, search) {
@@ -21,6 +24,9 @@ var RouterRhea = Router.extend({
     }));
   },
 
+  example: function(advertiserName, campaignName, lineItemKey) {
+    GlobalRegistry.get('sectionContainerView').open(new ExampleSection());
+  },
 
   notFound: function(path) {
     this.redirectTo('/error-404?path=' + encodeURIComponent(path));

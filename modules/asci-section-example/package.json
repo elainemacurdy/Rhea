@@ -1,0 +1,30 @@
+{
+  "name": "asci-section-example",
+  "version": "1.0.0",
+  "description": "Module to encapsulate an example ASCI UI section.",
+  "main": "asci-section-example.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "templates": "../../node_modules/.bin/domthing templates > templates.js",
+    "test": "../../node_modules/.bin/browserify test/index.js | ../../node_modules/.bin/tape-run | ../../node_modules/.bin/tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elainemacurdy/Rhea.git"
+  },
+  "keywords": [
+    "section",
+    "example"
+  ],
+  "author": "Elaine Harman <elaine.harman@audiencescience.com>",
+  "license": "ASI",
+  "bugs": {
+    "url": "https://github.com/elainemacurdy/Rhea/issues"
+  },
+  "homepage": "https://github.com/elainemacurdy/Rhea",
+  "dependencies": {
+    "domthing": "^0.4.0"
+  }
+}
