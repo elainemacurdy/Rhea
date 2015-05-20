@@ -1,0 +1,5 @@
+<div>
+  <div data-hook="subform-message-container" class="message message-below message-error">
+    <p data-hook="subform-message-text"></p>
+  </div>
+</div>

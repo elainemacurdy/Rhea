@@ -1,0 +1,34 @@
+{
+  "name": "asci-lineitem-validation",
+  "version": "1.6.1",
+  "description": "Client-side validations for Lineitem (RTB)",
+  "main": "asci-lineitem-validation.js",
+  "scripts": {
+    "lint": "../../node_modules/.bin/eslint --quiet *.js ./**/*.js",
+    "test": "../../node_modules/.bin/lab -c -t 90 -I navigator,window,moduleColorsMap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.uscorp.audsci.com:7999/asci/monoceros.git"
+  },
+  "publishConfig": {
+    "registry": "http://npmrepo.ascitest.net:4444"
+  },
+  "keywords": [
+    "ui",
+    "validation",
+    "lineitem"
+  ],
+  "author": "Stefan Tennigkeit <stefan.tennigkeit@audiencescience.com>",
+  "license": "ASI",
+  "dependencies": {
+    "bows": "^1.4.2",
+    "hoek": "^2.11.0",
+    "joi": "^5.1.0",
+    "moment": "~2.9.0"
+  },
+  "devDependencies": {
+    "code": "~1.2.1",
+    "lab": "~5.2.0"
+  }
+}

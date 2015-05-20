@@ -1,0 +1,38 @@
+{
+  "name": "asci-lineitem",
+  "version": "1.0.0",
+  "description": "Module for Lineitem model and collection.",
+  "homepage": "https://helios.audiencescience.com",
+  "bugs": {
+    "url": "http://jira.uscorp.audsci.com/secure/RapidBoard.jspa?rapidView=98&view=planning"
+  },
+  "main": "asci-lineitem.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "../../node_modules/.bin/eslint --quiet *.js ./**/*.js",
+    "test": "../../node_modules/.bin/tape test/index.js | ../../node_modules/.bin/tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.uscorp.audsci.com:7999/asci/monoceros.git"
+  },
+  "publishConfig": {
+    "registry": "http://npmrepo.ascitest.net:4444"
+  },
+  "keywords": [
+    "lineitem",
+    "model",
+    "collection"
+  ],
+  "author": "Stefan Tennigkeit <stefan.tennigkeit@audiencescience.com>",
+  "license": "ASI",
+  "dependencies": {
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "asci-tap-spec": "^2.1.0-asci",
+    "tape": "^3.0.1"
+  }
+}

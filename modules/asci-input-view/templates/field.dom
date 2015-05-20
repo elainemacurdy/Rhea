@@ -1,0 +1,11 @@
+<div class="formComponent textInput">
+  <label>
+    <span data-hook="label" class="label"></span>
+    <div class="fieldValue">
+      <span data-hook="prefix" class="prefix"></span><input type="text" class="field" data-hook="input"/><span data-hook="suffix" class="suffix"></span>
+      <div data-hook="message-container" class="message message-below message-error">
+        <p data-hook="message-text"></p>
+      </div>
+    </div>
+  </label>
+</div>

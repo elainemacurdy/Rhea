@@ -7,10 +7,22 @@ var HeaderView = BaseView.extend({
   type: 'HeaderView',
 
   bindings: {
-    'model.state': { type: 'class', hook: 'pageHeader' },
-    'dataLabel': { type: 'text', hook: 'dataLabel' },
-    'mediaLabel': { type: 'text', hook: 'mediaLabel' },
-    'insightsLabel': { type: 'text', hook: 'insightsLabel' }
+    'model.state': {
+      type: 'class',
+      hook: 'pageHeader'
+    },
+    'dataLabel': {
+      type: 'text',
+      hook: 'dataLabel'
+    },
+    'mediaLabel': {
+      type: 'text',
+      hook: 'mediaLabel'
+     },
+    'insightsLabel': {
+      type: 'text',
+      hook: 'insightsLabel'
+    }
   },
   events: {
     'click': 'onClickHeader',

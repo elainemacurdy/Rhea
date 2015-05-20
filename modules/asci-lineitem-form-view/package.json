@@ -1,0 +1,39 @@
+{
+  "name": "asci-lineitem-form-view",
+  "version": "1.0.0",
+  "description": "A module to encapsulate functionality for an editable line item.",
+  "main": "asci-lineitem-form-view.js",
+  "scripts": {
+    "cover": "../../node_modules/.bin/browserify -t coverify test/index.js | ../../node_modules/.bin/tape-run | ../../node_modules/.bin/coverify -o coverage | ../../node_modules/.bin/tap-spec",
+    "lint": "../../node_modules/.bin/eslint --quiet *.js ./**/*.js",
+    "templates": "../../node_modules/.bin/domthing templates > templates.js",
+    "test": "../../node_modules/.bin/browserify test/index.js | ../../node_modules/.bin/tape-run | ../../node_modules/.bin/tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.uscorp.audsci.com:7999/asci/monoceros.git"
+  },
+  "publishConfig": {
+    "registry": "http://npmrepo.ascitest.net:4444"
+  },
+  "keywords": [
+    "lineitem",
+    "form"
+  ],
+  "author": "Elaine Harman <elaine.harman@audiencescience.com>",
+  "license": "ASI",
+  "dependencies": {
+    "domthing": "~0.3.1"
+  },
+  "devDependencies": {
+    "ampersand-model": "^4.0.3",
+    "ampersand-view-conventions": "1.1.4-asci",
+    "browserify": "^6.1.0",
+    "function-bind": "^1.0.0",
+    "phantomjs": "^1.9.7-15",
+    "run-browser": "^1.3.1",
+    "tap-spec": "^1.0.1",
+    "tape": "^3.0.0",
+    "tape-run": "^0.3.0"
+  }
+}

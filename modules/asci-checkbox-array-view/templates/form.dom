@@ -1,0 +1,9 @@
+<div class="formComponent checkboxArrayInput">
+  <span data-hook="arrayLabel" class="label"></span>
+  <div class="fieldValue">
+    <span data-hook="field-container"></span>
+    <div data-hook="message-container" class="message message-below message-error">
+      <p data-hook="message-text"></p>
+    </div>
+  </div>
+</div>

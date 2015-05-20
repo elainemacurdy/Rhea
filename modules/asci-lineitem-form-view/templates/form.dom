@@ -1,0 +1,5 @@
+<div>
+  <span data-hook="form-message-container" class="message message-below message-error">
+    <p data-hook="form-message-text"></p>
+  </span>
+</div>

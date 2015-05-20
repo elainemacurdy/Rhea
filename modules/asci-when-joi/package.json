@@ -1,0 +1,40 @@
+{
+  "name": "asci-when-joi",
+  "version": "1.0.0",
+  "description": "A module to encapsulate the Joi-like 'when' framework we use because Joi's when statements don't quite work.",
+  "homepage": "http://ui.ascitest:9090",
+  "bugs": {
+    "url": "http://jira.uscorp.audsci.com/secure/RapidBoard.jspa?rapidView=98&view=planning&selectedIssue=UI-124"
+  },
+  "main": "asci-when-joi.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "../../node_modules/.bin/eslint --quiet *.js ./**/*.js",
+    "test": "../../node_modules/.bin/tape test/index.js | ../../node_modules/.bin/tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.uscorp.audsci.com:7999/asci/monoceros.git"
+  },
+  "publishConfig": {
+    "registry": "http://npmrepo.ascitest.net:4444"
+  },
+  "keywords": [
+    "when",
+    "joi",
+    "test",
+    "validation"
+  ],
+  "author": "Elaine Harman <elaine.harman@audiencescience.com>",
+  "license": "ASI",
+  "dependencies": {
+    "hoek": "^2.11.0",
+    "joi": "^5.1.0"
+  },
+  "devDependencies": {
+    "asci-tap-spec": "^2.1.0-asci",
+    "tape": "^3.0.1"
+  }
+}

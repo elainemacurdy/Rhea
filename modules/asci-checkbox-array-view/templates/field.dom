@@ -1,0 +1,5 @@
+<label>
+  <input type="checkbox" class="field" data-hook="input"/>
+  <span data-hook="label" class="label"></span>
+  <span data-hook="message-container" class="message message-below message-error"></span>
+</label>
